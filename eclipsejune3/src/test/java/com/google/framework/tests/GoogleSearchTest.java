@@ -19,6 +19,7 @@ public class GoogleSearchTest extends BaseTest {
         home.search("Selenium WebDriver");
         
         //Test
+        //FIXR
         
         
      // 1. Create a wait object that will wait up to 10 seconds
