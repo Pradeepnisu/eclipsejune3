@@ -4,5 +4,5 @@
         <classes>
             <class name="com.google.framework.tests.GoogleSearchTest"/>
         </classes>
-    </test>
+    </test>  //Test
 </suite>
