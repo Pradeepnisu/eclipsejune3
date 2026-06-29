@@ -16,20 +16,19 @@ public class GoogleSearchTest extends BaseTest {
     public void testGoogleSearch() {
         driver.get("https://www.google.com");
         GoogleHomePage home = new GoogleHomePage(driver);
-        home.search("Selenium WebDriver");
         
-        //Test
-        //FIXR
+        // Search for "keyboard facebook"
+        home.search("keyboard facebook");
         
+        // Click the first suggested Facebook link
+        home.clickFirstFacebookLink();
         
-     // 1. Create a wait object that will wait up to 10 seconds
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        
-        // 2. Wait UNTIL the title contains the text we expect
-        //boolean isTitleCorrect = wait.until(ExpectedConditions.titleContains("Selenium WebDriver"));
-        
-        // 3. Now assert it
-        //Assert.assertTrue(isTitleCorrect, "The title did not change to include the search query.");    }
-}
+        // Optionally wait a moment to see the page load
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
